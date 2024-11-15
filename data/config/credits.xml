@@ -1,0 +1,6 @@
+<!DOCTYPE codename-mod-credits>
+<!-- TEMPLATE FOR CUSTOM CREDITS!!! -->
+<menu name="Mod Credits" desc="67LMD Credits">
+	<github user="Dataleak13" customName="Dataleak" desc="I did literally all the code except for the engine itself" size="100" portrait="true"/>
+	<github user="taikigaming" customName="Taiki" desc="Animated the characters" size="100" portrait="true"/>
+</menu>

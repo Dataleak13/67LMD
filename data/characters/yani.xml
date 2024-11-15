@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character holdTime="6.1" x="-270" y="-40" scale="0.8" color="#AF66CE">
+	<anim anim="yani idle" name="idle"/>
+	<anim x="-51.25" y="-57.5" anim="yani down" name="singDOWN"/>
+	<anim x="31.25" y="-12.5" anim="yani left" name="singLEFT"/>
+	<anim x="-176.25" y="-8.75" anim="yani right" name="singRIGHT"/>
+	<anim x="-46.25" y="13.75" anim="yani up" name="singUP"/>
+</character>

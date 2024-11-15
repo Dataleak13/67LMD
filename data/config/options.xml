@@ -1,0 +1,7 @@
+<!DOCTYPE codename-mod-options>
+<!-- TEMPLATE FOR CUSTOM OPTIONS!!! -->
+<menu name="Mod Options" desc="Modify mod options here">
+	<checkbox id="nomodcharts" name="Disable modcharts?" desc="you dont like modcharts? turn this off!"/>
+	<checkbox id="disablestartwarn" name="Disable start up warning?" desc="seeing that warning everytime you load up the mod must get annoying right?"/>
+	<number id="numberExample" name="Number example" min="0" max="10" change="1"/>
+</menu>
