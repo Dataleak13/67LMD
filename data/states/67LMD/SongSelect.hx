@@ -21,24 +21,32 @@ function create() {
     charBG.alpha = 0.4;
     charBG.screenCenter(0x01);
     add(charBG);
-    // Melon
-    char1 = new FlxSprite(FlxG.width - 985,140);
-    char1.frames = Paths.getSparrowAtlas("characters/melon");
-	char1.animation.addByPrefix("idle", "melon idle");
+    // Yani
+    char1 = new FlxSprite(FlxG.width - 1020,150);
+    char1.frames = Paths.getSparrowAtlas("characters/yani");
+	char1.animation.addByPrefix("idle", "yani idle");
 	char1.animation.play("idle");
     char1.scale.set(0.6,0.6);
     char1.updateHitbox();
     char1.antialiasing = Options.antialiasing;
 	add(char1);
-    // Yani
-    char2 = new FlxSprite(FlxG.width - 860,140);
-    char2.frames = Paths.getSparrowAtlas("characters/yani");
-	char2.animation.addByPrefix("idle", "yani idle");
+    // Melon
+    char2 = new FlxSprite(FlxG.width - 830,140);
+    char2.frames = Paths.getSparrowAtlas("characters/melon");
+	char2.animation.addByPrefix("idle", "melon idle");
 	char2.animation.play("idle");
     char2.scale.set(0.6,0.6);
     char2.updateHitbox();
     char2.antialiasing = Options.antialiasing;
 	add(char2);
+    // haha logo
+    logo = new FunkinSprite(0,15,Paths.image('menus/epictitle'));
+    logo.scale.set(0.2,0.2);
+    logo.updateHitbox();
+    logo.screenCenter(0x01);
+    logo.antialiasing = Options.antialiasing;
+    add(logo);
+
 
     titleBG = new FlxSprite().makeGraphic(FlxG.width, 50, FlxColor.BLACK);
     titleBG.alpha = 0.4;
@@ -83,6 +91,7 @@ function update(){
         PlayState.loadSong("67LMD", "normal", false, false);
         FlxTween.tween(char1, {alpha: 0}, 0.7);
         FlxTween.tween(char2, {alpha: 0}, 0.7);
+        FlxTween.tween(logo, {alpha: 0}, 0.7);
         FlxTween.tween(FlxG.sound.music, {volume: 0}, 1.2, {ease: FlxEase.circIn});
         FlxTween.tween(FlxG.camera, {zoom: 6, alpha: 0}, 1.7, {ease: FlxEase.backIn, onComplete: function(twn:FlxTween){
             FlxG.switchState(new PlayState());
