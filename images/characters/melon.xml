@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Created with Funkin Packer v0.1.3 DEV https://neeeoo.github.io/funkin-packer/
+-->
+<TextureAtlas imagePath="melon.png" width="3432" height="3741" spritePadding="3" borderPadding="1">
+	<SubTexture name="melon down0000" x="1" y="1" width="593" height="569" frameX="-151" frameY="-200" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon down0001" x="597" y="1" width="585" height="572" frameX="-156" frameY="-197" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon down0002" x="597" y="1" width="585" height="572" frameX="-156" frameY="-197" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon down0003" x="1185" y="1" width="569" height="583" frameX="-162" frameY="-186" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon down0004" x="1185" y="1" width="569" height="583" frameX="-162" frameY="-186" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon down0005" x="1757" y="1" width="556" height="583" frameX="-168" frameY="-186" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon down0006" x="2316" y="1" width="556" height="583" frameX="-168" frameY="-186" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon down0007" x="2875" y="1" width="556" height="583" frameX="-168" frameY="-186" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon down0008" x="2875" y="1" width="556" height="583" frameX="-168" frameY="-186" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon down0009" x="2875" y="1" width="556" height="583" frameX="-168" frameY="-186" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon idle0000" x="1" y="587" width="575" height="773" frameX="-194" frameY="-103" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon idle0001" x="1" y="587" width="575" height="773" frameX="-194" frameY="-103" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon idle0002" x="579" y="587" width="571" height="778" frameX="-194" frameY="-98" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon idle0003" x="579" y="587" width="571" height="778" frameX="-194" frameY="-98" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon idle0004" x="1153" y="587" width="561" height="795" frameX="-197" frameY="-81" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon idle0005" x="1717" y="587" width="561" height="795" frameX="-197" frameY="-81" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon idle0006" x="2281" y="587" width="557" height="802" frameX="-198" frameY="-74" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon idle0007" x="2841" y="587" width="557" height="802" frameX="-198" frameY="-74" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon idle0008" x="1" y="1392" width="554" height="803" frameX="-198" frameY="-73" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon idle0009" x="558" y="1392" width="554" height="803" frameX="-198" frameY="-73" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon idle0010" x="1115" y="1392" width="552" height="803" frameX="-198" frameY="-73" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon idle0011" x="1115" y="1392" width="552" height="803" frameX="-198" frameY="-73" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon idle0012" x="1115" y="1392" width="552" height="803" frameX="-198" frameY="-73" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon idle0013" x="1115" y="1392" width="552" height="803" frameX="-198" frameY="-73" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon left0000" x="1670" y="1392" width="618" height="734" frameX="-118" frameY="-105" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon left0001" x="2291" y="1392" width="606" height="737" frameX="-133" frameY="-102" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon left0002" x="2291" y="1392" width="606" height="737" frameX="-133" frameY="-102" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon left0003" x="1" y="2198" width="600" height="733" frameX="-151" frameY="-106" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon left0004" x="1" y="2198" width="600" height="733" frameX="-151" frameY="-106" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon left0005" x="604" y="2198" width="590" height="733" frameX="-161" frameY="-106" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon left0006" x="604" y="2198" width="590" height="733" frameX="-161" frameY="-106" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon left0007" x="1197" y="2198" width="591" height="733" frameX="-161" frameY="-106" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon left0008" x="1197" y="2198" width="591" height="733" frameX="-161" frameY="-106" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon left0009" x="1197" y="2198" width="591" height="733" frameX="-161" frameY="-106" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon right0000" x="1791" y="2198" width="552" height="714" frameX="-246" frameY="-132" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon right0001" x="2346" y="2198" width="543" height="716" frameX="-245" frameY="-130" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon right0002" x="2346" y="2198" width="543" height="716" frameX="-245" frameY="-130" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon right0003" x="2892" y="2198" width="524" height="718" frameX="-242" frameY="-128" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon right0004" x="2892" y="2198" width="524" height="718" frameX="-242" frameY="-128" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon right0005" x="1" y="2934" width="514" height="719" frameX="-241" frameY="-127" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon right0006" x="1" y="2934" width="514" height="719" frameX="-241" frameY="-127" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon right0007" x="518" y="2934" width="514" height="719" frameX="-241" frameY="-127" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon right0008" x="518" y="2934" width="514" height="719" frameX="-241" frameY="-127" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon right0009" x="518" y="2934" width="514" height="719" frameX="-241" frameY="-127" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon up0000" x="1035" y="2934" width="401" height="806" frameX="-210" frameY="-46" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon up0001" x="1439" y="2934" width="403" height="798" frameX="-210" frameY="-54" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon up0002" x="1439" y="2934" width="403" height="798" frameX="-210" frameY="-54" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon up0003" x="1845" y="2934" width="411" height="780" frameX="-205" frameY="-72" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon up0004" x="1845" y="2934" width="411" height="780" frameX="-205" frameY="-72" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon up0005" x="2259" y="2934" width="414" height="772" frameX="-203" frameY="-80" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon up0006" x="2259" y="2934" width="414" height="772" frameX="-203" frameY="-80" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon up0007" x="2676" y="2934" width="414" height="772" frameX="-203" frameY="-80" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon up0008" x="2676" y="2934" width="414" height="772" frameX="-203" frameY="-80" frameWidth="950" frameHeight="950"/>
+	<SubTexture name="melon up0009" x="2676" y="2934" width="414" height="772" frameX="-203" frameY="-80" frameWidth="950" frameHeight="950"/>
+</TextureAtlas>

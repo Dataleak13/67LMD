@@ -23,8 +23,8 @@ function create() {
     add(charBG);
     // Melon
     char1 = new FlxSprite(FlxG.width - 985,140);
-    char1.frames = Paths.getSparrowAtlas("characters/yani");
-	char1.animation.addByPrefix("idle", "yani idle");
+    char1.frames = Paths.getSparrowAtlas("characters/melon");
+	char1.animation.addByPrefix("idle", "melon idle");
 	char1.animation.play("idle");
     char1.scale.set(0.6,0.6);
     char1.updateHitbox();

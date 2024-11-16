@@ -1,0 +1,8 @@
+<!DOCTYPE codename-engine-character>
+<character x="-260" y="-40" sprite="melon" scale="0.9" icon="melon" holdTime="6.1">
+	<anim name="idle" anim="melon idle" x="0" y="0" fps="24" loop="false"/>
+	<anim name="singDOWN" anim="melon down" x="27.5" y="-107.5" fps="24" loop="false"/>
+	<anim name="singLEFT" anim="melon left" x="55" y="-33.75" fps="24" loop="false"/>
+	<anim name="singRIGHT" anim="melon right" x="-51.25" y="-23.75" fps="24" loop="false"/>
+	<anim name="singUP" anim="melon up" x="-11.25" y="-20" fps="24" loop="false"/>
+</character>
