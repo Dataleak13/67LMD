@@ -16,7 +16,7 @@ var transitioning:Bool = false;
 
 function create() {
     CoolUtil.playMusic(Paths.inst("67LMD", "normal"),false,1,true);
-
+    FlxG.camera.y += 900;
     charBG = new FlxSprite().makeGraphic(450, FlxG.height, FlxColor.WHITE);
     charBG.alpha = 0.4;
     charBG.screenCenter(0x01);
@@ -28,6 +28,7 @@ function create() {
 	char1.animation.play("idle");
     char1.scale.set(0.6,0.6);
     char1.updateHitbox();
+    char1.antialiasing = Options.antialiasing;
 	add(char1);
     // Yani
     char2 = new FlxSprite(FlxG.width - 860,140);
@@ -36,6 +37,7 @@ function create() {
 	char2.animation.play("idle");
     char2.scale.set(0.6,0.6);
     char2.updateHitbox();
+    char2.antialiasing = Options.antialiasing;
 	add(char2);
 
     titleBG = new FlxSprite().makeGraphic(FlxG.width, 50, FlxColor.BLACK);
@@ -49,6 +51,8 @@ function create() {
     playTxt.screenCenter(0x01);
     playTxt.x = playTxt.x + 10;
     add(playTxt);
+    
+    // window shit real???
     winx = Lib.application.window.x;
 	winy = Lib.application.window.y;
     Lib.application.window.fullscreen = false;
@@ -60,6 +64,10 @@ function create() {
 	Lib.current.y = -900;
 	Lib.current.scaleX = 3;
 	Lib.current.scaleY = 3;
+    transitioning = true;
+    FlxTween.tween(FlxG.camera, {y: FlxG.camera.y - 900}, 1.8, {ease: FlxEase.backInOut, onComplete: function(twn:FlxTween){
+        transitioning = false;
+    }});
 }
 
 function update(){
