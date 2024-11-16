@@ -1,3 +1,4 @@
+// sorrgy for the mess i made everything in this mod in a rush :3c - Dataleak
 // Imports
 import funkin.backend.utils.CoolUtil;
 import openfl.Lib;
@@ -13,6 +14,10 @@ var charBG:FlxSprite;
 var bg:FunkinSprite;
 var difficultyOptions:Array<FlxSprite> = [];
 var transitioning:Bool = false;
+var defaultCamZoom:Float = 1.0;
+var camZoomLerp:Float = 0.05;
+var maxCamZoom:Float = 1.35;
+var camZoomingStrength:Float = 1;
 
 function create() {
     CoolUtil.playMusic(Paths.inst("67LMD", "normal"),false,1,true);
@@ -79,13 +84,15 @@ function create() {
 }
 
 function update(){
+    if (Options.camZoomOnBeat)
+        FlxG.camera.zoom = lerp(FlxG.camera.zoom, defaultCamZoom, camZoomLerp);
 	if (controls.BACK && !transitioning)
 	{
 		CoolUtil.playMenuSFX(2, 10);
         
 		FlxG.switchState(new MainMenuState());
 	}
-    if (FlxG.mouse.justPressed && !transitioning) {
+    if (FlxG.mouse.justPressed && !transitioning || controls.ACCEPT && !transitioning) {
         transitioning = true;
         CoolUtil.playMenuSFX(1,1);
         PlayState.loadSong("67LMD", "normal", false, false);
@@ -96,6 +103,12 @@ function update(){
         FlxTween.tween(FlxG.camera, {zoom: 6, alpha: 0}, 1.7, {ease: FlxEase.backIn, onComplete: function(twn:FlxTween){
             FlxG.switchState(new PlayState());
         }});
+    }
+}
+function beatHit(curBeat:Int) {
+    if (Options.camZoomOnBeat && FlxG.camera.zoom < maxCamZoom)
+    {
+        FlxG.camera.zoom += 0.015 * camZoomingStrength;
     }
 }
 function destroy() {

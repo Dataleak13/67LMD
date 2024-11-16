@@ -7,10 +7,11 @@
 	"difficulties": [
 		"normal"
 	],
-	"needsVoices": true,
+	"needsVoices": false,
 	"parsedColor": -1,
 	"displayName": "67LMD",
 	"icon": "face",
 	"name": "67LMD",
-	"color": "#FFFFFF"
+	"color": "#FFFFFF",
+	"customValues": {}
 }

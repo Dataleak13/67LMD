@@ -16,6 +16,10 @@ var options:FlxSprite;
 var char:FlxSprite;
 var titleTxt:FlxText;
 var transitioning:Bool = false;
+var defaultCamZoom:Float = 1.0;
+var camZoomLerp:Float = 0.05;
+var maxCamZoom:Float = 1.35;
+var camZoomingStrength:Float = 1;
 
 var menuOptions:Array<FlxSprite> = [];
 
@@ -91,13 +95,15 @@ function create(){
 }
 
 function update(){
+    titleTxt.screenCenter(0x01);
+    if (Options.camZoomOnBeat)
+        FlxG.camera.zoom = lerp(FlxG.camera.zoom, defaultCamZoom, camZoomLerp);
     // the handler for options or somethin idk
     for (i in 0...menuOptions.length){
         if (FlxG.mouse.overlaps(menuOptions.members[i]) && !transitioning) {
             menuOptions.members[i].animation.play("select");
             menuOptions.members[i].scale.set(0.7,0.7);
             menuOptions.members[i].updateHitbox();
-            titleTxt.screenCenter(0x01);
             switch(i){
                 case 0:
                     titleTxt.text = "Play the song!";
@@ -111,8 +117,10 @@ function update(){
             if (FlxG.mouse.justPressed) {
                 CoolUtil.playMenuSFX(1,1);
                 transitioning = true;
-                FlxTween.tween(FlxG.sound.music, {volume: 0}, 1.3, {ease: FlxEase.circOut});
-                FlxTween.tween(FlxG.camera, {y: FlxG.camera.y + 900}, 1.9, {ease: FlxEase.backIn, onComplete: function (twn:FlxTween){
+                if (i == 0)
+                    FlxTween.tween(FlxG.sound.music, {volume: 0}, 1.3, {ease: FlxEase.circOut});
+                FlxTween.tween(FlxG.camera, {alpha: 0}, 1.2, {ease: FlxEase.backIn});
+                FlxTween.tween(FlxG.camera, {y: FlxG.camera.y + 900}, 1.3, {ease: FlxEase.backIn, onComplete: function (twn:FlxTween){
                     switch(i){
                         case 0:
                             FlxG.switchState(new FreeplayState());
@@ -145,16 +153,9 @@ function update(){
     }
 }
 function beatHit(curBeat:Int){
-    if (Options.camZoomOnBeat){
-        if (curBeat % 4 == 1) {
-            FlxTween.tween(FlxG.camera, {zoom: 1.05}, (0.3 * (1 / (Conductor.bpm / 60))), {ease: FlxEase.expoIn, onComplete: function(twn:FlxTween){
-                FlxTween.tween(FlxG.camera, {zoom: 1}, (0.3 * (1 / (Conductor.bpm / 60))), {ease: FlxEase.expoOut});
-            }});
-        }
-        else if (curBeat % 4 == 3) {
-            FlxTween.tween(FlxG.camera, {zoom: 1.05}, (0.3 * (1 / (Conductor.bpm / 60))), {ease: FlxEase.expoIn, onComplete: function(twn:FlxTween){
-                FlxTween.tween(FlxG.camera, {zoom: 1}, (0.3 * (1 / (Conductor.bpm / 60))), {ease: FlxEase.expoOut});
-            }});
-        }
+    // ripped right from the codename source code!
+    if (Options.camZoomOnBeat && FlxG.camera.zoom < maxCamZoom && curBeat % 4 == 0)
+    {
+        FlxG.camera.zoom += 0.025 * camZoomingStrength;
     }
 }
