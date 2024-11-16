@@ -20,7 +20,7 @@ var maxCamZoom:Float = 1.35;
 var camZoomingStrength:Float = 1;
 
 function create() {
-    CoolUtil.playMusic(Paths.inst("67LMD", "normal"),false,1,true);
+    CoolUtil.playMusic(Paths.inst("67LMD", "67LMD"),false,1,true);
     FlxG.camera.y += 900;
     charBG = new FlxSprite().makeGraphic(450, FlxG.height, FlxColor.WHITE);
     charBG.alpha = 0.4;
@@ -95,7 +95,7 @@ function update(){
     if (FlxG.mouse.justPressed && !transitioning || controls.ACCEPT && !transitioning) {
         transitioning = true;
         CoolUtil.playMenuSFX(1,1);
-        PlayState.loadSong("67LMD", "normal", false, false);
+        PlayState.loadSong("67LMD", "67LMD", false, false);
         FlxTween.tween(char1, {alpha: 0}, 0.7);
         FlxTween.tween(char2, {alpha: 0}, 0.7);
         FlxTween.tween(logo, {alpha: 0}, 0.7);
