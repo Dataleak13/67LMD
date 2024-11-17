@@ -26,8 +26,6 @@ function new() {
     // FlxG.save.data is your mod's save data
     if (FlxG.save.data.nomodcharts == null)
         FlxG.save.data.nomodcharts = false;
-    if (FlxG.save.data.disablestartwarn == null)
-        FlxG.save.data.disablestartwarn = false;
     if (FlxG.save.data.hideicons == null)
         FlxG.save.data.hideicons = false;
     // -- Dataleak

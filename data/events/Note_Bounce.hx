@@ -17,7 +17,7 @@ function onEvent(e:EventGameEvent){
 }
 
 function stepHit(){
-    if (FlxG.save.data.nomodcharts) {
+    if (!FlxG.save.data.nomodcharts) {
         if (boing){
             if (curStep % 4 == 0){
                 boingUp();

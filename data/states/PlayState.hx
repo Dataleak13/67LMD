@@ -7,6 +7,8 @@ var melonIcon:HealthIcon;
 var bfIcon:HealthIcon;
 var yaniIcon:HealthIcon;
 var newicon = true;
+var botplayTxt:FunkinText;
+var botplay:Bool = false;
 function create() {
     missesTxt.visible = false;
     accuracyTxt.visible = false;
@@ -48,6 +50,11 @@ function create() {
         yaniIcon.visible = false;
         bfIcon.visible = false;
     }
+    botplayTxt = new FunkinText(0, 80, 0, "BOTPLAY", 36, true);
+    botplayTxt.cameras = [camHUD];
+    botplayTxt.screenCenter(0x01);
+    botplayTxt.visible = botplay;
+    add(botplayTxt);
 }
 
 function update() {
@@ -73,6 +80,18 @@ function update() {
             yaniIcon.setIcon("yani",150,150);
             newicon = true;
         }
+    }
+    if (FlxG.keys.justPressed.EIGHT) {
+        validScore = false;
+        if (botplay) {
+            player.cpu = false;
+            botplay = false;
+        }
+        else if (!botplay) {
+            player.cpu = true;
+            botplay = true;
+        }
+        botplayTxt.visible = botplay;
     }
 }
 function beatHit() {
