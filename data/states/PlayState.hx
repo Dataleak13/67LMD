@@ -55,6 +55,11 @@ function create() {
     botplayTxt.screenCenter(0x01);
     botplayTxt.visible = botplay;
     add(botplayTxt);
+
+    //botplay shit
+    botplay = FlxG.save.data.botplay;
+    strumLines.members[2].cpu = botplay;
+    botplayTxt.visible = botplay;
 }
 
 function update() {
@@ -68,7 +73,7 @@ function update() {
 	    yaniIcon.scale.set(lerp(iconP2.scale.x, 0.8, 0.33), lerp(iconP2.scale.y, 0.8, 0.33));
         
         melonIcon.updateHitbox();
-	    bfIcon.updateHitbox();
+	    bfIcon.updateHitbox(); 
 	    yaniIcon.updateHitbox();
     }
     if (FlxG.keys.justPressed.NINE) {
@@ -84,14 +89,15 @@ function update() {
     if (FlxG.keys.justPressed.EIGHT) {
         validScore = false;
         if (botplay) {
-            player.cpu = false;
+            strumLines.members[2].cpu = false;
             botplay = false;
         }
         else if (!botplay) {
-            player.cpu = true;
+            strumLines.members[2].cpu = true;
             botplay = true;
         }
         botplayTxt.visible = botplay;
+        FlxG.save.data.botplay = botplay;
     }
 }
 function beatHit() {
