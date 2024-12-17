@@ -1,7 +1,6 @@
 <!DOCTYPE codename-mod-credits>
-<!-- TEMPLATE FOR CUSTOM CREDITS!!! -->
 <menu name="Mod Credits" desc="67LMD Credits">
-	<github user="Dataleak13" customName="Dataleak" desc="I did literally all the code except for the engine itself" size="100" portrait="true"/>
-	<github user="taikigaming" customName="Taiki" desc="i animated the characters and charted the song wow so cool anyways check out tgci" size="100" portrait="true"/>
+	<credit name="67Originite" desc="Director and artist" icon="proto" size="100" url="https://protosszog.carrd.co/" portrait="true"/>
+	<github user="Dataleak13" customName="Dataleak" desc="Coder, I worked too hard on this mod it did not need a custom main menu and freeplay" size="100" portrait="true"/>
+	<github user="taikigaming" customName="Taiki" desc="Animator" size="100" portrait="true"/>
 </menu>
-mllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllkll
