@@ -32,6 +32,11 @@ function create() {
         }
     }
     
+    //get these strumlines away from me
+    if (FlxG.save.data.hideopps) {
+        strumLines.members[0].visible = false;
+        strumLines.members[1].visible = false;
+    }
 
     timeBar = new FlxBar(0, 0, FlxBarFillDirection.RIGHT_TO_LEFT, FlxG.width, 15, strumLines, "length", 0, 58000, false);
 	timeBar.cameras = [camHUD];

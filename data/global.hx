@@ -28,6 +28,8 @@ function new() {
         FlxG.save.data.nomodcharts = false;
     if (FlxG.save.data.hideicons == null)
         FlxG.save.data.hideicons = false;
+    if (FlxG.save.data.hideopps == null)
+        FlxG.save.data.hideopps = false;
     // -- Dataleak
     if (indev)
         WindowUtils.winTitle = "67LMD: A Friday Night Funkin' oneshot [DEVELOPMENT BUILD]";

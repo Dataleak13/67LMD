@@ -3,4 +3,5 @@
 <menu name="Mod Options" desc="Modify mod options here">
 	<checkbox id="hideicons" name="Hide Icons?" desc="icons behind the strums might be distracting. This turns it off!"/>
 	<checkbox id="nomodcharts" name="Disable modcharts?" desc="you dont like modcharts? turn this off!"/>
+	<checkbox id="hideopps" name="Disable Opponents Strumlines?" desc="opponents too distracting? This turns it off!"/>
 </menu>
