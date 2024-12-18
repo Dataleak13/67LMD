@@ -13,60 +13,54 @@ function create() {
     missesTxt.visible = false;
     accuracyTxt.visible = false;
     scoreTxt.x = scoreTxt.x - 220;
+
     bfIcon = new HealthIcon("bf",false);
-    bfIcon.cameras = [camHUD];
-    bfIcon.scale.set(0.8,0.8);
     bfIcon.setPosition(FlxG.width - 310, 130);
-    insert(strumLines, bfIcon);
-    
     yaniIcon = new HealthIcon("yani",false);
-    yaniIcon.cameras = [camHUD];
-    yaniIcon.scale.set(0.8,0.8);
     yaniIcon.setPosition(FlxG.width - 1130, 130);
-    insert(strumLines, yaniIcon);
-    
     melonIcon = new HealthIcon("melon",false);
-    melonIcon.cameras = [camHUD];
-    melonIcon.scale.set(0.8,0.8);
     melonIcon.screenCenter(0x01);
     melonIcon.y = 130;
-    insert(strumLines, melonIcon);
+    for (icons in [bfIcon, yaniIcon, melonIcon]) {
+        icons.cameras = [camHUD];
+        icons.scale.set(0.8,0.8);
+        icons.scrollFactor(1,1);
+        insert(strumLines, icons);
+        if (FlxG.save.data.hideicons) {
+            icons.visible = false;
+        }
+    }
+    
 
-    timeBar = new FlxBar(0, 0, FlxBarFillDirection.RIGHT_TO_LEFT, FlxG.width, 15, strumLines, "length", 0, 158000, false);
+    timeBar = new FlxBar(0, 0, FlxBarFillDirection.RIGHT_TO_LEFT, FlxG.width, 15, strumLines, "length", 0, 58000, false);
 	timeBar.cameras = [camHUD];
-	timeBar.numDivisions = 158000;
+	timeBar.numDivisions = 58000;
 	timeBar.flipX = true;
 	timeBar.createColoredEmptyBar(0x60000000, false);
 	timeBar.createColoredFilledBar(0xFFffffff, false);
 	add(timeBar);
 
     introLength = 0;
-    //doIconBop = false;
     health = 0.1;
     iconP1.visible = false;
     iconP2.visible = false;
-    if (FlxG.save.data.hideicons) {
-        melonIcon.visible = false;
-        yaniIcon.visible = false;
-        bfIcon.visible = false;
-    }
+
+    //botplay shit
     botplayTxt = new FunkinText(0, 80, 0, "BOTPLAY", 36, true);
     botplayTxt.cameras = [camHUD];
     botplayTxt.screenCenter(0x01);
     botplayTxt.visible = botplay;
     add(botplayTxt);
-
-    //botplay shit
     botplay = FlxG.save.data.botplay;
     strumLines.members[2].cpu = botplay;
     botplayTxt.visible = botplay;
 }
 
 function update() {
+    // Icon stuff
     melonIcon.health = 1 - (healthBar.percent / 100);
     yaniIcon.health = 1 - (healthBar.percent / 100);
     bfIcon.health = healthBar.percent / 100;
-
     if (doIconBop) {
         melonIcon.scale.set(lerp(iconP1.scale.x, 1, 0.33), lerp(iconP1.scale.y, 1, 0.33));
         bfIcon.scale.set(lerp(iconP1.scale.x, 1, 0.33), lerp(iconP1.scale.y, 1, 0.33));
@@ -76,6 +70,7 @@ function update() {
 	    bfIcon.updateHitbox(); 
 	    yaniIcon.updateHitbox();
     }
+    // easter egg!!!!
     if (FlxG.keys.justPressed.NINE) {
         if (newicon) {
             yaniIcon.setIcon("yani-old",150,150);
@@ -86,6 +81,7 @@ function update() {
             newicon = true;
         }
     }
+    // botplay for all the STINKIES
     if (FlxG.keys.justPressed.EIGHT) {
         validScore = false;
         if (botplay) {
@@ -101,6 +97,7 @@ function update() {
     }
 }
 function beatHit() {
+    // bwa
     if (doIconBop) {
         bfIcon.scale.set(1.2, 1.2);
 	    yaniIcon.scale.set(1.2, 1.2);
@@ -112,6 +109,6 @@ function beatHit() {
     }
 }
 function postUpdate() {
+    // timeBar stuff my beloved
     timeBar.value = inst.time;
-    
 }

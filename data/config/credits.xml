@@ -1,6 +1,9 @@
 <!DOCTYPE codename-mod-credits>
 <menu name="Mod Credits" desc="67LMD Credits">
-	<credit name="67Originite" desc="Director and artist" icon="proto" size="100" url="https://protosszog.carrd.co/" portrait="true"/>
-	<github user="Dataleak13" customName="Dataleak" desc="Coder, I worked too hard on this mod it did not need a custom main menu and freeplay" size="100" portrait="true"/>
-	<github user="taikigaming" customName="Taiki" desc="Animator" size="100" portrait="true"/>
+	<credit name="Protosszog" desc="Director and artist" icon="proto" size="100" url="https://protosszog.carrd.co/" portrait="true"/>
+	<credit name="Taiki" desc="Animator and charter" icon="taiki" size="100" url="https://www.youtube.com/channel/UCf9I4UPqpH9OMsQkFCWZHeA" portrait="true"/>
+	<github user="Dataleak13" customName="Dataleak" desc="Coder, I worked too hard on this mod it did NOT need a custom main menu and freeplay" size="100" portrait="true"/>
+	<credit name="W" desc="Composer" icon="w" size="100" url="https://www.youtube.com/@rhodeswisadel" portrait="true"/>
+	<credit name="MelonTheCat" desc="Owner of Misaka and #1 Lappland Enjoyer" icon="melon" size="100" url="" portrait="true"/>
+	<credit name="YaniFC" desc="Owner of Yani" icon="yani" size="100" url="https://nak1yosh.straw.page/" portrait="true"/>
 </menu>
