@@ -1,3 +1,4 @@
+// its pretty messy but i just want this out so im not cleaning this up fuck you :3c - Dataleak
 import funkin.game.HealthIcon;
 import flixel.ui.FlxBar.FlxBarFillDirection;
 import flixel.ui.FlxBar;

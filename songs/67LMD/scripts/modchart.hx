@@ -1,5 +1,4 @@
-
-
+// basic functions
 function finaleBullshit(num:String){
     if (num == '1')
         FlxTween.tween(camHUD, {alpha: 0}, 1.2);
