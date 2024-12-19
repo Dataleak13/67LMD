@@ -1,3 +1,4 @@
+// credits to syrup for making this event
 var boing:Bool = false;
 
 function onEvent(e:EventGameEvent){

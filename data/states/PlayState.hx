@@ -37,7 +37,6 @@ function create() {
         strumLines.members[0].visible = false;
         strumLines.members[1].visible = false;
     }
-
     timeBar = new FlxBar(0, 0, FlxBarFillDirection.RIGHT_TO_LEFT, FlxG.width, 15, strumLines, "length", 0, 58000, false);
 	timeBar.cameras = [camHUD];
 	timeBar.numDivisions = 58000;
@@ -45,9 +44,8 @@ function create() {
 	timeBar.createColoredEmptyBar(0x60000000, false);
 	timeBar.createColoredFilledBar(0xFFffffff, false);
 	add(timeBar);
-
+    healthBar.createColoredFilledBar(0xff00F400, false);
     introLength = 0;
-    health = 0.1;
     iconP1.visible = false;
     iconP2.visible = false;
 
@@ -58,7 +56,7 @@ function create() {
     botplayTxt.visible = botplay;
     add(botplayTxt);
     botplay = FlxG.save.data.botplay;
-    strumLines.members[2].cpu = botplay;
+    strumLines.members[1].cpu = botplay;
     botplayTxt.visible = botplay;
 }
 
@@ -91,11 +89,11 @@ function update() {
     if (FlxG.keys.justPressed.EIGHT) {
         validScore = false;
         if (botplay) {
-            strumLines.members[2].cpu = false;
+            strumLines.members[1].cpu = false;
             botplay = false;
         }
         else if (!botplay) {
-            strumLines.members[2].cpu = true;
+            strumLines.members[1].cpu = true;
             botplay = true;
         }
         botplayTxt.visible = botplay;

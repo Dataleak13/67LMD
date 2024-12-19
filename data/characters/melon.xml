@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character x="-210" y="-40" sprite="melon" scale="0.9" icon="melon" holdTime="6.1" camx="30">
+<character x="-210" y="-40" sprite="melon" scale="0.9" camx="30" icon="melon" holdTime="6.1">
 	<anim name="idle" anim="melon idle" x="0" y="0" fps="24" loop="false"/>
 	<anim name="singDOWN" anim="melon down" x="27.5" y="-107.5" fps="24" loop="false"/>
 	<anim name="singLEFT" anim="melon left" x="55" y="-33.75" fps="24" loop="false"/>
