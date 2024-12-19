@@ -1,10 +1,10 @@
 <!DOCTYPE codename-engine-stage>
 <stage zoom="0.9" name="afternight" folder="stages/afternight/" startCamPosY="300" startCamPosX="700">
-	<sprite name="sky" x="0" y="0" sprite="sky" scale="1.3" antialiasing="true"/>
-	<sprite name="clouds" x="0" y="0" sprite="clouds" scale="1.3" antialiasing="true"/>
-	<sprite name="bgItems" x="0" y="0" sprite="backgroundorsomeshit" scale="1.3" antialiasing="true"/>
-	<sprite name="foreground" x="0" y="0" sprite="forebackground" scale="1.3" antialiasing="true"/>
-	<sprite name="sign" x="30" y="-20" sprite="thing" scale="1.3" antialiasing="true"/>
+	<sprite name="sky" x="0" y="0" sprite="sky" scale="1.4" antialiasing="true"/>
+	<sprite name="clouds" x="0" y="0" sprite="clouds" scale="1.4" antialiasing="true"/>
+	<sprite name="bgItems" x="0" y="0" sprite="backgroundorsomeshit" scale="1.4" antialiasing="true"/>
+	<sprite name="foreground" x="0" y="0" sprite="forebackground" scale="1.4" antialiasing="true"/>
+	<sprite name="sign" x="30" y="-20" sprite="thing" scale="1.4" antialiasing="true"/>
 	<girlfriend y="45" x="450"/>
 	<character name="melon" y="20" x="300"/>
 	<dad y="50" x="50"/>
